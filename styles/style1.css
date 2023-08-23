@@ -1,0 +1,98 @@
+*{
+    *{
+        margin: 0;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+}
+header{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+body{
+    background-color: rgb(121, 21, 91);
+}
+footer{
+    background-color: black;
+    color: rgb(194, 51, 115);
+    
+}
+.card{
+    background-color: black;
+    color: rgb(194, 51, 115);
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+.btn{
+    background-color: rgb(121, 21, 91);
+    border: none;
+    color: black;
+    
+}
+.detail-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.detail-btn>btn{
+    align-self: end;
+}
+
+.nav1{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;  
+}
+.nav-link{
+    color: rgb(194, 51, 115);
+    border: 1px solid rgb(194, 51, 115);
+    padding: 2px;
+}
+.nav-link.active{
+    color: rgb(194, 51, 115);
+}
+.navbar-nav .nav-link.active{
+    background-color: rgb(194, 51, 115);
+    color: black;
+}
+
+#amazing_logo{
+    height: 5vw;
+}
+.carousel-item{
+    height: 35vh;
+}
+.carousel-caption>h1{
+    color: black;
+}
+#categories_div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 5px;
+}
+.categories_fill>input, label{
+    padding: 3px;
+}
+.card-body{
+    text-align: center;
+}
+#cards_div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.card{
+    padding: 10px; 
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
