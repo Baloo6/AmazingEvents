@@ -1,9 +1,7 @@
 *{
-    *{
-        margin: 0;
-        padding: 0px;
-        box-sizing: border-box;
-    }
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
 }
 header{
     display: flex;
@@ -62,6 +60,9 @@ footer{
     background-color: rgb(194, 51, 115);
     color: black;
 }
+.navbar>.container-fluid{
+    justify-content: flex-end;
+}
 
 #amazing_logo{
     height: 5vw;
@@ -114,6 +115,11 @@ footer{
 #btn_fill:hover{
     background-color: rgba(245, 221, 221, 0.986);
     color: rgb(121, 21, 91);
+    border-color: rgb(121, 21, 91);
+}
+.btn-detail:hover{
+    background-color: rgba(245, 221, 221, 0.986);
+    color: rgb(121, 21, 91);
 }
 
 /* Formulario Contact */
@@ -154,4 +160,39 @@ footer{
 }
 .table{
     margin-bottom: 0;
+    caption-side: top;
+}
+caption {
+    padding-top: 0;
+    padding-bottom: 0;
+    color: var(--bs-secondary-color);
+    text-align: left;
+}
+/* Details */
+.detail_div{
+    display: flex;
+    justify-content: center;
+}
+
+/* Breakpoint 425px */
+@media only screen and (max-width:425px){
+    #amazing_logo{
+        width: 30vw;
+        height: 10vh;
+        padding: 3px;
+    }
+    .categories_fill{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
+    #categories_div{
+        align-items: center;
+        margin-top: 5px;
+        
+    }
+
+    
 }

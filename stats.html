@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Past Events</title>
+    <title>Stats</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/style1.css">
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
@@ -11,32 +11,36 @@
 
 <body>
     <header>
-        <div class="nav1">
-            <img src="./assets/amazing_brand.png" alt="logo" id="amazing_logo">
-            <nav class="navbar navbar-expand-lg bg-black">
-                <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="upcoming_events.html">Upcoming Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="past_events.html">Past Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Stats</a>
-                    </li>
-                    </ul>
-                </div>
-                </div>
-            </nav>
-        </div>
+      <div class="nav1">
+        <img src="./assets/amazing_brand.png" alt="logo" id="amazing_logo">
+        <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Fifth navbar example">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="true" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="navbar-collapse collapse show" id="navbarsExample05">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link"  href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="upcoming_events.html">Upcoming Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="past_events.html">Past Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Stats</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
         <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -78,9 +82,9 @@
         <div class="tables_stats">
         <div class="table_divs col-11">
             <table class="table">
-                <h4 class="tt_stats">Events Statistics</h4>
+                <caption><h4 class="tt_stats">Events Statistics</h4></caption>
                 <thead>  
-                    <tr class=>
+                    <tr >
                         <th class="table-danger" scope="col">Events with highest % of assistance</th>
                         <th class="table-danger" scope="col">Events with lowest % of assistance</th>
                         <th class="table-danger" scope="col">Events with larger capacity</th>
@@ -100,7 +104,7 @@
                 </tbody>
             </table>
             <table class="table">
-                <h4 class="tt_stats">Upcoming events statistics by category</h4>
+                <caption><h4 class="tt_stats">Upcoming events statistics by category</h4></caption>     
                 <thead>  
                     <tr>
                         <th class="table-danger" scope="col">Categories</th>
@@ -122,7 +126,8 @@
                 </tbody>
             </table>
             <table class="table">
-                <h4 class="tt_stats">Past events statistics by category</h4>
+                <caption><h4 class="tt_stats">Past events statistics by category</h4></caption>
+                
                 <thead>  
                     <tr>
                         <th class="table-danger" scope="col">Categories</th>

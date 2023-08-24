@@ -11,33 +11,37 @@
 
 <body>
     <header>
-        <div class="nav1">
-            <img src="./assets/amazing_brand.png" alt="logo" id="amazing_logo">
-            <nav class="navbar navbar-expand-lg bg-black">
-                <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Upcoming Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"  href="past_events.html">Past Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="stats.html">Stats</a>
-                    </li>
-                    </ul>
-                </div>
-                </div>
-            </nav>
-        </div>
-        <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="nav1">
+        <img src="./assets/amazing_brand.png" alt="logo" id="amazing_logo">
+        <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Fifth navbar example">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="true" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="navbar-collapse collapse show" id="navbarsExample05">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Upcoming Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="past_events.html">Past Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="stats.html">Stats</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -71,24 +75,19 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
-        </div>
+      </div>
     </header>
 
     <main>
         <div id="categories_div">
-            <div class="categories_fill">
-                <input type="checkbox" name="category1" id="category1">
-                <label for="category1">Category</label>
-                <input type="checkbox" name="category2" id="category2">
-                <label for="category2">Category</label>
-                <input type="checkbox" name="category3" id="category3">
-                <label for="category3">Category</label>
-                <input type="checkbox" name="category4" id="category4">
-                <label for="category4">Category</label>
-                <input type="checkbox" name="category5" id="category5">
-                <label for="category5">Category</label>
-            </div>
-            <div id="categories_search">
+          <div class="categories_fill">               
+            <label for="category1">Category <input type="checkbox" name="category1" id="category1"></label>             
+            <label for="category2">Category <input type="checkbox" name="category2" id="category2"></label>               
+            <label for="category3">Category <input type="checkbox" name="category3" id="category3"></label>             
+            <label for="category4">Category <input type="checkbox" name="category4" id="category4"></label>
+            <label for="category5">Category <input type="checkbox" name="category5" id="category5"></label>
+          </div>
+          <div id="categories_search">
                 <nav class="navbar bg-transparent">
                     <div class="container-fluid">
                       <form class="d-flex" role="search">
@@ -97,7 +96,7 @@
                       </form>
                     </div>
                   </nav>
-            </div>
+          </div>
         </div>
         <div id="cards_div">
           <div class="card" style="width: 18rem;">
