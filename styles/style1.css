@@ -10,6 +10,11 @@ header{
     flex-direction: column;
     background-color: black;
 }
+.carousel-caption{
+    padding-bottom: 4.0rem;
+
+
+}
 body{
     background-color: rgb(121, 21, 91);
 }
@@ -26,8 +31,8 @@ footer{
 }
 .btn{
     background-color: rgb(121, 21, 91);
-    border: none;
-    color: black;
+    border: 1px solid rgba(245, 221, 221, 0.986);
+    color: rgba(245, 221, 221, 0.986);
     
 }
 .detail-btn{
@@ -63,9 +68,14 @@ footer{
 }
 .carousel-item{
     height: 35vh;
+    /* opacity: 75%; */
+    /* filter: brightness(20%); */
+}
+.d-block{
+    filter: brightness(50%);
 }
 .carousel-caption>h1{
-    color: black;
+    color: rgba(245, 221, 221, 0.986);
 }
 #categories_div{
     display: flex;
@@ -74,6 +84,10 @@ footer{
     justify-content: space-between;
     align-items: baseline;
     padding: 5px;
+}
+.categories_fill{
+    border: 1px solid rgba(245, 221, 221, 0.986);
+    padding: 2px;
 }
 .categories_fill>input, label{
     padding: 3px;
@@ -95,4 +109,49 @@ footer{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+#btn_fill:hover{
+    background-color: rgba(245, 221, 221, 0.986);
+    color: rgb(121, 21, 91);
+}
+
+/* Formulario Contact */
+.form_contact{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.form_message{
+    height: 15vh;
+}
+.form-label{
+    color: rgba(245, 221, 221, 0.986);
+}
+
+/* Tables stats */
+.tables_stats{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    
+}
+.table_divs{
+    display: flex;
+    flex-flow: column wrap;
+    border: 1px solid rgba(8, 8, 8, 0.781);
+    padding: 0px;
+}
+.tt_stats{
+    background-color: rgba(128, 128, 128, 0.705);
+    color:  rgba(245, 221, 221, 0.986);
+    margin-bottom: 0;
+}
+.table{
+    margin-bottom: 0;
 }
