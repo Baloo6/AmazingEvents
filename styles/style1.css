@@ -24,9 +24,13 @@ footer{
 .card{
     background-color: black;
     color: rgb(194, 51, 115);
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+/* .card-details{
     margin-top: 6.7%;
     margin-bottom: 6.75%;
-}
+} */
 .btn{
     background-color: rgb(121, 21, 91);
     border: 1px solid rgba(245, 221, 221, 0.986);
@@ -69,11 +73,13 @@ footer{
 }
 .carousel-item{
     height: 35vh;
-    /* opacity: 75%; */
-    /* filter: brightness(20%); */
+}
+.img-carousel{
+    height: 35vh;
+    object-fit: cover;
 }
 .d-block{
-    filter: brightness(50%);
+    filter: brightness(60%);
 }
 .carousel-caption>h1{
     color: rgba(245, 221, 221, 0.986);
@@ -94,6 +100,9 @@ footer{
     padding: 3px;
 }
 .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
 }
 #cards_div{
@@ -104,6 +113,10 @@ footer{
 }
 .card{
     padding: 10px; 
+}
+.card-img-top{
+    height: 12rem;
+    object-fit: cover;
 }
 footer{
     display: flex;
@@ -172,6 +185,7 @@ caption {
 .detail_div{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 /* Breakpoint 425px */
