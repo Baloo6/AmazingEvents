@@ -1,90 +1,107 @@
-*{
+* {
     margin: 0;
     padding: 0px;
     box-sizing: border-box;
 }
-header{
+
+header {
     display: flex;
     flex-direction: column;
     background-color: black;
 }
-.carousel-caption{
+
+.carousel-caption {
     padding-bottom: 4.0rem;
 
 
 }
-body{
+
+body {
     background-color: rgb(121, 21, 91);
 }
-footer{
+
+footer {
     background-color: black;
     color: rgb(194, 51, 115);
-    
+
 }
-.card{
+
+.card {
     background-color: black;
     color: rgb(194, 51, 115);
     margin-top: 5vh;
     margin-bottom: 5vh;
 }
+
 /* .card-details{
     margin-top: 6.7%;
     margin-bottom: 6.75%;
 } */
-.btn{
+.btn {
     background-color: rgb(121, 21, 91);
     border: 1px solid rgba(245, 221, 221, 0.986);
     color: rgba(245, 221, 221, 0.986);
-    
+
 }
-.detail-btn{
+
+.detail-btn {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
 }
-.detail-btn>btn{
+
+.detail-btn>btn {
     align-self: end;
 }
 
-.nav1{
+.nav1 {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;  
+    justify-content: space-between;
 }
-.nav-link{
+
+.nav-link {
     color: rgb(194, 51, 115);
     border: 1px solid rgb(194, 51, 115);
     padding: 2px;
 }
-.nav-link.active{
+
+.nav-link.active {
     color: rgb(194, 51, 115);
 }
-.navbar-nav .nav-link.active{
+
+.navbar-nav .nav-link.active {
     background-color: rgb(194, 51, 115);
     color: black;
 }
-.navbar>.container-fluid{
+
+.navbar>.container-fluid {
     justify-content: flex-end;
 }
 
-#amazing_logo{
+#amazing_logo {
     height: 5vw;
 }
-.carousel-item{
+
+.carousel-item {
     height: 35vh;
 }
-.img-carousel{
+
+.img-carousel {
     height: 35vh;
     object-fit: cover;
 }
-.d-block{
+
+.d-block {
     filter: brightness(60%);
 }
-.carousel-caption>h1{
+
+.carousel-caption>h1 {
     color: rgba(245, 221, 221, 0.986);
 }
-#categories_div{
+
+#categories_div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -92,51 +109,60 @@ footer{
     align-items: baseline;
     padding: 5px;
 }
-.categories_fill{
+
+.categories_fill {
     border: 1px solid rgba(245, 221, 221, 0.986);
     padding: 2px;
 }
-.categories_fill>input, label{
+
+.categories_fill>input,
+label {
     padding: 3px;
 }
-.card-body{
+
+.card-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
 }
-#cards_div{
+
+#cards_div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-.card{
-    padding: 10px; 
+
+.card {
+    padding: 10px;
 }
-.card-img-top{
+
+.card-img-top {
     height: 12rem;
     object-fit: cover;
 }
-footer{
+
+footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-#btn_fill:hover{
+#btn_fill:hover {
     background-color: rgba(245, 221, 221, 0.986);
     color: rgb(121, 21, 91);
     border-color: rgb(121, 21, 91);
 }
-.btn-detail:hover{
+
+.btn-detail:hover {
     background-color: rgba(245, 221, 221, 0.986);
     color: rgb(121, 21, 91);
 }
 
 /* Formulario Contact */
-.form_contact{
+.form_contact {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -144,69 +170,78 @@ footer{
     align-items: center;
     padding: 10px;
 }
-.form_message{
+
+.form_message {
     height: 15vh;
 }
-.form-label{
+
+.form-label {
     color: rgba(245, 221, 221, 0.986);
 }
 
 /* Tables stats */
-.tables_stats{
+.tables_stats {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 2vh;
     margin-bottom: 2vh;
-    
+
 }
-.table_divs{
+
+.table_divs {
     display: flex;
     flex-flow: column wrap;
     border: 1px solid rgba(8, 8, 8, 0.781);
     padding: 0px;
 }
-.tt_stats{
+
+.tt_stats {
     background-color: rgba(128, 128, 128, 0.705);
-    color:  rgba(245, 221, 221, 0.986);
+    color: rgba(245, 221, 221, 0.986);
     margin-bottom: 0;
 }
-.table{
+
+.table {
     margin-bottom: 0;
     caption-side: top;
 }
+
 caption {
     padding-top: 0;
     padding-bottom: 0;
     color: var(--bs-secondary-color);
     text-align: left;
 }
+
 /* Details */
-.detail_div{
+.detail_div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 /* Breakpoint 425px */
-@media only screen and (max-width:425px){
-    #amazing_logo{
+@media only screen and (max-width:425px) {
+    #amazing_logo {
         width: 30vw;
         height: 10vh;
         padding: 3px;
     }
-    .categories_fill{
+
+    .categories_fill {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
 
     }
-    #categories_div{
+
+    #categories_div {
         align-items: center;
         margin-top: 5px;
-        
+
     }
 
-    
+
 }
