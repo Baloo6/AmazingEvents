@@ -1,4 +1,3 @@
-
 let arrayPasado= []
 let today = Date.now()
 let dataEvents = data.events
@@ -12,11 +11,12 @@ function filtrarEventos(parametroArray){
 }
 filtrarEventos(dataEvents)
 
-// Funcion para agregar info
+// Funcion para agregar info y contador.
+let cardContador = 0;
 function addInfo(arrayFiltrado){
-    let template= ''
+    let template= '';
         for(let event of arrayFiltrado){
-            
+            cardContador++;
             template += `<div class="card" style="width: 18rem;">
             <img src="${event.image}" class="card-img-top" alt="event cinema">
             <div class="card-body">
@@ -30,9 +30,12 @@ function addInfo(arrayFiltrado){
         </div>`
     } 
     return template
- 
 }
-let estructuraCard = addInfo(arrayPasado)
 
+let estructuraCard = addInfo(arrayPasado);
 let cardsDinamicas = document.getElementById('cards_div')
 cardsDinamicas.innerHTML += estructuraCard
+
+let contadorCards = `<h3> Cartas visualizadas: ${cardContador} </h3>`
+let categoriesDiv = document.getElementById('categories_div')
+categoriesDiv.innerHTML += contadorCards
