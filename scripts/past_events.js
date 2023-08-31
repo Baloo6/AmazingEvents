@@ -17,7 +17,7 @@ function addInfo(arrayFiltrado){
     let template= '';
         for(let event of arrayFiltrado){
             cardContador++;
-            template += `<div class="card" style="width: 18rem;">
+            template += `<div class="card _fondo" style="width: 18rem;">
             <img src="${event.image}" class="card-img-top" alt="event cinema">
             <div class="card-body">
             <h5 class="card-title">${event.name}</h5>
@@ -32,10 +32,11 @@ function addInfo(arrayFiltrado){
     return template
 }
 
+/* Agregar las cards/contador obtenidas por la funcion e inyectarlas en el HTML */
 let estructuraCard = addInfo(arrayPasado);
 let cardsDinamicas = document.getElementById('cards_div')
 cardsDinamicas.innerHTML += estructuraCard
 
-let contadorCards = `<h3> Cartas visualizadas: ${cardContador} </h3>`
+let contadorCards = `<h3> Total events: ${cardContador} </h3>`
 let categoriesDiv = document.getElementById('categories_div')
 categoriesDiv.innerHTML += contadorCards

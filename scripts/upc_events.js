@@ -12,11 +12,12 @@ function filtrarEventos(parametroArray){
 filtrarEventos(dataEvents)
 
 // Funcion para agregar info
+let cardContador = 0;
 function addInfo(arrayFiltrado){
     let template= ''
         for(let event of arrayFiltrado){
-            
-            template += `<div class="card" style="width: 18rem;">
+            cardContador++;
+            template += `<div class="card _fondo" style="width: 18rem;">
             <img src="${event.image}" class="card-img-top" alt="event cinema">
             <div class="card-body">
             <h5 class="card-title">${event.name}</h5>
@@ -32,6 +33,9 @@ function addInfo(arrayFiltrado){
  
 }
 let estructuraCard = addInfo(arrayPasado)
-
 let cardsDinamicas = document.getElementById('cards_div')
 cardsDinamicas.innerHTML += estructuraCard
+
+let contadorCards = `<h3> Total events: ${cardContador} </h3>`
+let categoriesDiv = document.getElementById('categories_div')
+categoriesDiv.innerHTML += contadorCards
