@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 * {
     margin: 0;
     padding: 0px;
@@ -166,6 +168,8 @@ footer {
     color: rgb(121, 21, 91);
 }
 
+
+
 /* Formulario Contact */
 .form_contact {
     display: flex;
@@ -225,6 +229,31 @@ caption {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Boton like de cards*/
+i {
+    color: #fff;
+}
+.favorite {
+    margin-right: 5px;
+    margin-top: 5px;
+    background-color: #12121296;
+    color: #fff;
+}
+
+.favorite:hover {
+    background-color: #d90368;
+    color: #fff;
+}
+
+.bi-heart:hover {
+    color: #fff;
+}
+
+.favorite.like {
+    color: #d90368 !important;
+    background-color: #000000d5 !important;
 }
 
 /* Breakpoint 425px */

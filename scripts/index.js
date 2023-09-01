@@ -2,7 +2,7 @@ let template= ''
 let cardContador= 0;
 for(let event of data.events){
     cardContador++ ;
-    template += `<div class="card _fondo" style="width: 18rem;">
+    template += `<div class="card _fondo" style="width: 18rem;"> <i class="favorite btn position-absolute top-0 end-0 bi bi-heart-fill" id="fav"></i>
     <img src="${event.image}" class="card-img-top" alt="event cinema">
     <div class="card-body">
       <h5 class="card-title">${event.name}</h5>
@@ -14,6 +14,14 @@ for(let event of data.events){
     </div>
 </div>`
 }
+
+// Función para marcar eventos favoritos
+const favButtons = document.querySelectorAll('.favorite');
+favButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+        this.classList.toggle('like');
+    });
+});
 
 let cardsDinamicas = document.getElementById('cards_div')
 cardsDinamicas.innerHTML += template
