@@ -1,5 +1,6 @@
 let template= ''
 let cardContador= 0;
+let events = data.events;
 for(let event of data.events){
     cardContador++ ;
     template += `<div class="card _fondo" style="width: 18rem;">
@@ -30,3 +31,38 @@ favButtons.forEach(function (button) {
           this.classList.toggle('like');
       });
   });
+  
+
+const $catContainer = document.getElementById('catContainer');
+// Función para crear categorias filtradas
+let option = 0;
+function createCats(array) {
+    let templateCats = "";
+    for (let i = 0; i < array.length; i++) {
+        const nameCat = array[i];
+        option++;
+        templateCats += generateTemplateCat(nameCat);
+    }
+    $catContainer.innerHTML = templateCats;
+}
+
+// Filtro para eliminar categorias repetidas
+let cat = [];
+const categories = events.filter(element => {
+    const isDuplicate = cat.includes(element.category);
+    if (!isDuplicate) {
+        cat.push(element.category);
+        return true;
+    }
+    return false;
+});
+
+// Función para crear el template de las categorias
+function generateTemplateCat(event) {
+    return `
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="${option}" value="${option}">
+        <label class="form-check-label" for="${option}">${event}</label>
+    </div>`
+}
+createCats(cat);
