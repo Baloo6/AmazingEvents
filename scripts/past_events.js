@@ -55,7 +55,7 @@ function crearCard(arrayPasado) {
             </div>
             <div class="detail-btn">
                     <p>Price:${arrayPasado.price}</p>
-                    <a href="details.html" class="btn btn-detail">Details</a>
+                    <a href="details.html?id=${arrayPasado._id}" class="btn btn-detail">Details</a>
             </div> 
             
         </div>
