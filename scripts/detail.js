@@ -21,7 +21,7 @@ pastOrUpcoming();
 function generateTemplate(eventSelected) {
     return `
     <div class="col-md-4">
-        <img src="${eventSelected.image}" class="img-fluid rounded-start h-100 object-fit-cover" alt="Card Image Element">
+        <img src="${eventSelected.image}" class="img-fluid rounded-start h-100 object-fit-cover card_details" alt="Card Image Element">
     </div>
     <div class="col-md-8">
         <div class="card-body lh-sm">

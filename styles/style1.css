@@ -142,6 +142,12 @@ label {
     object-fit: cover;
 }
 
+.card-details{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
 /* Fondo animado cards*/
 ._fondo:hover{
     transform: scale(1.1);
