@@ -99,13 +99,14 @@ footer {
     color: rgba(245, 221, 221, 0.986);
 }
 
-#categories_div {
+#cat_div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
     padding: 5px;
+    color: rgba(245, 221, 221, 0.986);
 }
 
 .categories_fill {
@@ -275,7 +276,7 @@ i {
 
     }
 
-    #categories_div {
+    #cat_div {
         align-items: center;
         margin-top: 5px;
 
