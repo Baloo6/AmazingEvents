@@ -1,10 +1,7 @@
-
-
 const $eventStats = document.getElementById('eventStats');
 const $pastEventsStats = document.getElementById('pastEventsStats');
 const $upcomingEventsStats = document.getElementById('upcomingEventsStats');
 
-//Fn para el fetch de la api
 async function getData() {
     try {
         const response = await fetch('https://mindhub-xj03.onrender.com/api/amazing');
@@ -19,7 +16,7 @@ getData();
 
 function finalData(data) {
     const { events, currentDate } = data;
-    //Filtrado de past y upcoming 
+
     const filterUpcomingEvents = (events, curDate) =>
         events.filter(event => Date.parse(event.date) > Date.parse(curDate));
 
@@ -28,11 +25,11 @@ function finalData(data) {
     const filterPastEvents = (events, curDate) =>
         events.filter(event => Date.parse(event.date) < Date.parse(curDate));
 
-    const pastEvents = filterPastEvents(events, currentDate);
+    const createPastEvents = filterPastEvents(events, currentDate);
 
     const upcomingCats = [...new Set(upcomingEvents.map(event => event.category))];
-    const pastCats = [...new Set(pastEvents.map(event => event.category))];
-    //Filtrado por % de asistencia
+    const pastCats = [...new Set(createPastEvents.map(event => event.category))];
+
     const highestAssistance = events =>
         events.reduce((acc, { assistance, capacity, name }) => {
             const number = (assistance / capacity) * 100;
@@ -59,9 +56,10 @@ function finalData(data) {
             return acc;
         }, { contador: 0, eventTitle: "" });
 
-    // Inner de las stats en las tablas
-    $eventStats.innerHTML = `<td>${highestAssistance(pastEvents).eventTitle} ${highestAssistance(pastEvents).contador.toFixed(2)}%</td>
-    <td>${lowestAssistance(pastEvents).eventTitle} ${lowestAssistance(pastEvents).contador.toFixed(2)}%</td>
+
+    $eventStats.innerHTML = `
+    <td>${highestAssistance(createPastEvents).eventTitle} ${highestAssistance(createPastEvents).contador.toFixed(2)}%</td>
+    <td>${lowestAssistance(createPastEvents).eventTitle} ${lowestAssistance(createPastEvents).contador.toFixed(2)}%</td>
     <td>${largerCapacity(events).eventTitle} ${largerCapacity(events).contador.toLocaleString(undefined, { maximumFractionDigits: 0 })}</td>`;
 
     const dataEvents = (categories, events) =>
@@ -77,10 +75,11 @@ function finalData(data) {
             };
         });
 
-    const pastEventsData = dataEvents(pastCats, createPastEvents);
-    const upcomingEventsData = dataEvents(upcomingCats, upcomingEvents);
+    const dataShowPastEvent = dataEvents(pastCats, createPastEvents);
+    const dataShowUpcomingEvent = dataEvents(upcomingCats, upcomingEvents);
 
-    const generateTemplate = event => `<tr>
+    const generateTemplate = event => `
+    <tr>
         <td>${event.category}</td>
         <td>$ ${event.eventsRevenues.toLocaleString(undefined, { maximumFractionDigits: 0 })}</td>
         <td>${event.attendance.toFixed(2)}%</td>
@@ -91,7 +90,7 @@ function finalData(data) {
         timeEvent.innerHTML = templateCardsUpcoming;
     };
 
-    createCards(pastEventsData, $pastEventsStats);
-    createCards(upcomingEventsData, $upcomingEventsStats);
+    createCards(dataShowPastEvent, $pastEventsStats);
+    createCards(dataShowUpcomingEvent, $upcomingEventsStats);
 
 }
